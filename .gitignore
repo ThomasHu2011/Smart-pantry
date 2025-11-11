@@ -1,0 +1,19 @@
+# Existing rules
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.env
+.env.*
+.vscode/
+.DS_Store
+uploads/
+
+# Hide specific project files
+smartpantry_presentation.md
+icon_setup_complete.md
+api_documentation.md
+users.json
+app_icons/
+asses.xcassets/
+gitignore
