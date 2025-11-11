@@ -15,7 +15,7 @@ icon_setup_complete.md
 api_documentation.md
 users.json
 app_icons/
-asses.xcassets/
-gitignore
+Assets.xcassets/   
 pantry.db
 static_logo.png
+get-pip.py
