@@ -17,3 +17,5 @@ users.json
 app_icons/
 asses.xcassets/
 gitignore
+pantry.db
+static_logo.png
