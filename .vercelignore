@@ -1,0 +1,5 @@
+# Prevent Vercel from auto-detecting app.py files
+**/app.py
+!api/index.py
+SmartPantryWeb/app.py
+
