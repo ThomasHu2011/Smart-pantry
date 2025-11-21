@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "framework": null,
-  "installCommand": "pip install -r SmartPantryWeb/requirements.txt",
   "builds": [
     {
-      "src": "SmartPantryWeb/app.py",
+      "src": "app.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "50mb",
@@ -17,7 +13,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "SmartPantryWeb/app.py"
+      "dest": "app.py"
     }
   ]
 }
