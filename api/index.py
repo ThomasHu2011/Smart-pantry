@@ -1,5 +1,6 @@
 # Vercel serverless function entry point (root level)
 # This file imports the Flask app from SmartPantryWeb directory
+# CRITICAL: This is the ONLY entry point Vercel should use
 
 import sys
 import os
@@ -47,5 +48,5 @@ if not app:
     raise ValueError("Flask app not found or is None")
 
 # Export handler for Vercel - this is what Vercel looks for
+# CRITICAL: This handler export is required for Vercel to invoke the function
 handler = app
-
