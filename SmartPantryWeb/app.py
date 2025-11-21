@@ -24,10 +24,15 @@ except Exception as e:
         print(f"Note: Could not load .env file: {e}")
 
 # Initialize Flask app with explicit configuration for serverless
+# Use absolute paths for templates and static files to work in serverless
+_app_dir = os.path.dirname(os.path.abspath(__file__))
+_template_folder = os.path.join(_app_dir, 'templates')
+_static_folder = os.path.join(_app_dir, 'static')
+
 app = Flask(__name__, 
-            template_folder='templates',  # Explicitly set template folder
-            static_folder='static',       # Explicitly set static folder
-            static_url_path='/static')    # Explicitly set static URL path
+            template_folder=_template_folder,  # Absolute path for serverless
+            static_folder=_static_folder,      # Absolute path for serverless
+            static_url_path='/static')         # Static URL path
 
 # Use environment variable for secret key if available, otherwise use default
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'supersecretkey')  # Needed for flash messages
