@@ -1400,5 +1400,7 @@ def api_health():
 handler = app
 
 if __name__ == "__main__":
+    # Get port from environment variable (Render sets this) or use default
+    port = int(os.getenv('PORT', 5050))
     # host='0.0.0.0' allows connections from other devices on the network
-    app.run(debug=True, host='0.0.0.0', port=5050)
+    app.run(debug=False, host='0.0.0.0', port=port)
